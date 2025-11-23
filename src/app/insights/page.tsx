@@ -241,7 +241,7 @@ const SymptomCorrelationMatrix = () => {
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis type="number" dataKey="cycleDay" name="Cycle Day" unit="" domain={[1, 45]} tickLine={false} axisLine={false} tickMargin={8} />
                             <YAxis type="number" dataKey="severity" name="Severity" unit="" domain={[0, 6]} tickLine={false} axisLine={false} tickMargin={8} />
-                            <ZAxis type="string" dataKey="name" name="Symptom" />
+                          <ZAxis type="category" dataKey="name" name="Symptom" />
                             <Tooltip content={<ChartTooltipContent cursor={false} />} />
                             <Scatter name="Symptoms" data={chartData as any} fill="hsl(var(--primary))" />
                         </ScatterChart>

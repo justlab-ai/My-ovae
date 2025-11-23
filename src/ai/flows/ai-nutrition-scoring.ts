@@ -112,7 +112,7 @@ const analyzeMealPhotoFlow = ai.defineFlow(
   async input => {
     // Make sure to pass the userId to the prompt so it can be used by the tool.
     const {output} = await analyzeMealPhotoPrompt(input, {
-      userId: input.userId
+      
     });
     return output!;
   }

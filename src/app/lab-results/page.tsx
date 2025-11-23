@@ -19,7 +19,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { NotebookText, AlertTriangle, CalendarIcon, Plus, Trash2, Loader2, Save, BrainCircuit, Sparkles, LineChart, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useUser, useFirestore, addDocumentNonBlocking, deleteDocumentNonBlocking } from '@/firebase';
-import { collection } from 'firebase/firestore';
+import { collection, doc } from 'firebase/firestore';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
 import { analyzeLabResults, LabResultAnalysisOutput } from '@/ai/flows/ai-lab-result-analyzer';

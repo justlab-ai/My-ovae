@@ -270,12 +270,14 @@ export default function CycleTrackerPage() {
     if (!historicalPeriodLogs) return [];
     
     const dates: Date[] = [];
-    historicalPeriodLogs.forEach(log => {
-      const logDate = (log.date as any)?.toDate();
-      if (logDate && log.flow && log.flow !== 'none') {
-        dates.push(logDate);
-      }
-    });
+if (Array.isArray(historicalPeriodLogs)) {
+  historicalPeriodLogs.forEach(log => {
+    const logDate = (log.date as any)?.toDate();
+    if (logDate && log.flow && log.flow !== 'none') {
+      dates.push(logDate);
+    }
+  });
+}
     
     return dates;
   }, [historicalPeriodLogs]);

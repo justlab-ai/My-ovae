@@ -18,7 +18,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { NotebookText, AlertTriangle, CalendarIcon, Plus, Trash2, Loader2, Save, BrainCircuit, Sparkles, LineChart, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useUser, useFirestore, addDocumentNonBlocking, deleteDocumentNonBlocking } from '@/firebase';
+import { useUser, useFirestore, collection, addDocumentNonBlocking, deleteDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
 import { analyzeLabResults, LabResultAnalysisOutput } from '@/ai/flows/ai-lab-result-analyzer';
